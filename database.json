@@ -1,0 +1,80 @@
+[
+  {
+    "model": "authentication.reservation",
+    "pk": 1,
+    "fields": {
+      "created_at": "2023-05-19T12:18:43.415Z",
+      "service": "Premium",
+      "name": "mahmoud",
+      "phone_number": "01227571459",
+      "car_model": "BYD",
+      "email": "AMOGUS@gmail.com",
+      "date": "2024-03-31"
+    }
+  },
+  {
+    "model": "authentication.reservation",
+    "pk": 2,
+    "fields": {
+      "created_at": "2023-05-19T12:24:47.940Z",
+      "service": "Premium",
+      "name": "BlackMirror",
+      "phone_number": "1231414123",
+      "car_model": "BYD",
+      "email": "mahmoud.mo2men4700@gmail.com",
+      "date": "2023-03-23"
+    }
+  },
+  {
+    "model": "authentication.reservation",
+    "pk": 3,
+    "fields": {
+      "created_at": "2023-05-19T12:26:30.783Z",
+      "service": "Premium",
+      "name": "ccc",
+      "phone_number": "12314141232",
+      "car_model": "toyota",
+      "email": "dd@gmail.com",
+      "date": "2023-06-05"
+    }
+  },
+  {
+    "model": "authentication.reservation",
+    "pk": 4,
+    "fields": {
+      "created_at": "2023-05-19T12:27:50.623Z",
+      "service": "Premium",
+      "name": "BlackMirror",
+      "phone_number": "1231414123",
+      "car_model": "BMW",
+      "email": "AMOGUS@gmail.com",
+      "date": "2024-05-04"
+    }
+  },
+  {
+    "model": "authentication.reservation",
+    "pk": 5,
+    "fields": {
+      "created_at": "2023-05-19T12:29:52.718Z",
+      "service": "Basic",
+      "name": "ccc",
+      "phone_number": "01227571459",
+      "car_model": "marcedes",
+      "email": "AMOGUS@gmail.com",
+      "date": "2034-04-02"
+    }
+  },
+  {
+    "model": "authentication.reservation",
+    "pk": 6,
+    "fields": {
+      "created_at": "2023-05-19T12:32:53.412Z",
+      "service": "Premium",
+      "name": "mahmoud momen",
+      "phone_number": "12314141232",
+      "car_model": "toyotasssss",
+      "email": "mahmoud.mo2men4700@gmail.com",
+      "date": "2023-06-02"
+    }
+  }
+]

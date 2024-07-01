@@ -1,0 +1,38 @@
+{% if reservations %}
+
+  <table class="reservation-table">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href='{% static "css/res.css" %}'>
+
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Car Model</th>
+      <th>Date</th>
+      <th>Service</th>
+    </tr>
+    {% for reservation in reservations %}
+    <tr>
+      <td>{{ reservation.name }}</td>
+      <td>{{ reservation.phone_number }}</td>
+      <td>{{ reservation.email }}</td>
+      <td>{{ reservation.car_model }}</td>
+      <td>{{ reservation.date }}</td>
+      <td>
+        {% if reservation.service == 'Basic' %}
+          Basic Cleaning
+        {% elif reservation.service == 'Premium' %}
+          Premium Cleaning
+        {% elif reservation.service == 'Complex' %}
+          Complex Cleaning
+        {% else %}
+          Unknown
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>No reservations found.</p>
+{% endif %}

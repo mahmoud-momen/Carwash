@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href='{% static "css/master.css" %}'/>
+    <title>Mr Bubble</title>
+
+
+    <!--light-slider.css------------->
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css">
+    <!--Jquery-------------------->
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <!--lightslider.js--------------->
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</head>
+<body>
+
+
+<header>
+<img src="{%static 'images/2.png'%}"alt="" class="logo">
+    <nav class="navigation">
+        <a href="#Home">Home</a>
+        <a href="#Store">Store</a>
+        <a href="#Service">Service</a>
+        <a href="#About-us">About Us</a>
+        <a href="#Contact">Contact</a>
+
+    </nav>
+
+{% if user.is_authenticated %}
+  <form action="{% url 'signout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="nav-btn logout-btn">Logout</button>
+  </form>
+{% else %}
+  <a href="{% url 'signin' %}" class="nav-btn login-btn">Login</a>
+{% endif %}
+
+
+
+
+</header>
+
+<section class="main"id="Home">
+
+    <div>
+        <h3>WASHING & DETAILING</h3>
+        <h2>Want to wash the car by yourself?</h2>
+        <a href="/SIGNUP" class="main-btn"> Add Vehicle</a>
+    </div>
+</section>
+
+
+
+<h2 class="store-title" id="Store">Store</h2>
+<div class="slider">
+    <div>
+<img src="{%static 'images/tier.jpg'%}"alt="">
+      <div class="desc">
+        <h2><span>Car </span> tire</h2>
+        <p>$289.99 - $299.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <div>
+   <img src="{%static 'images/tail.jpg'%}"alt="">
+      <div class="desc">
+        <h2><span>Tail </span>light</h2>
+        <p>$299.99 - $329.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <div>
+    <img src="{%static 'images/outsidemirror.jpg'%}"alt="">
+      <div class="desc">
+        <h2><span>outside</span>  mirror</h2>
+        <p>$289.99 - $299.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <div>
+    <img src="{%static 'images/grill.jpg'%}"alt="">
+      <div class="desc">
+        <h2><span>car </span> grill</h2>
+        <p>$299.99 - $329.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <div>
+    <img src="{%static 'images/headlight1.jpg'%}"alt="">
+      <div class="desc">
+        <h2><span>Head</span> light</h2>
+        <p>$289.99 - $299.99</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <div>
+    <img src="{%static 'images/steeringwheel1.jpeg'%}"alt="">
+        <div class="desc">
+          <h2><span>steering </span> wheel</h2>
+          <p>$289.99 - $299.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <h2 class="packages-title" id="Service" >Washing Plans</h2>
+
+<div class="page3">
+  <div class="wrapper">
+    <div class="table basic">
+      <div class="head_tab"><h2>BASIC CLEANING</h2></div>
+      <div class="aj_p"><p>Good Solution</p></div>
+      <div class="price-section">
+        <div class="price-area">
+          <div class="inner-area">
+            <span class="text">$</span>
+            <span class="price">29</span>
+
+          </div>
+        </div>
+      </div>
+      <div class="package-name"></div>
+      <ul class="features">
+        <div class="btn">Book Now</div>
+        <p class="aj_des">10% off on mirrors</p>
+        <li>
+          <span class="list-name">Seats Washing</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Vacuum Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Exterior Cleaning</span>
+          <span class="icon cross"><i class="fas fa-times"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Interior Wet Cleaning</span>
+          <span class="icon cross"><i class="fas fa-times"></i></span>
+        </li>
+      </ul>
+      <div><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+    </div>
+    <div class="table premium" id="premium">
+      <div class="head_tab"><h2>PREMIUM CLEANING</h2></div>
+      <div class="aj_p"><p>Better Solution</p></div>
+      <div class="ribbon"><span>BEST VALUE</span></div>
+      <div class="price-section">
+        <div class="price-area">
+          <div class="inner-area">
+            <span class="text">$</span>
+            <span class="price">59</span>
+          </div>
+        </div>
+      </div>
+      <div class="package-name"></div>
+      <ul class="features">
+        <div class="btn">Book Now</div>
+        <p class="aj_des">10% off on tires</p>
+        <li>
+          <span class="list-name">Seats Washing</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Vacuum Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Exterior Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Interior Wet Cleaning</span>
+          <span class="icon cross"><i class="fas fa-times"></i></span>
+        </li>
+      </ul>
+      <div class="premium_all"><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+    </div>
+    <div class="table ultimate">
+      <div class="head_tab"><h2>COMPLEX CLEANING</h2></div>
+      <div class="aj_p"><p>Best Solution</p></div>
+      <div class="price-section">
+        <div class="price-area">
+          <div class="inner-area">
+            <span class="text">$</span>
+            <span class="price">99</span>
+          </div>
+        </div>
+      </div>
+      <div class="package-name"></div>
+      <ul class="features">
+        <div class="btn">Book Now</div>
+        <p class="aj_des">10% off on all products</p>
+        <li>
+          <span class="list-name">Seats Washing</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Vacuum Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Exterior Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span class="list-name">Interior Wet Cleaning</span>
+          <span class="icon check"><i class="fas fa-check"></i></span>
+        </li>
+      </ul>
+      <div><h2>See all features <span class="icon cross"><i class="fa fa-angle-down"></i></span></h2></div>
+    </div>
+  </div>
+</div>
+
+
+<form method="POST" action="{% url 'reservation_create' %}">
+  {% csrf_token %}
+
+  {% if messages %}
+    {% for message in messages %}
+      <p class="msg"> <script> alert('{{ message }}') </script>></p>
+    {% endfor %}
+  {% endif %}
+
+  <h2 class="reg-title">Reservation</h2>
+  <div class="reg-wrapper">
+    <div class="title">
+      Reservation Form
+    </div>
+    <div class="form">
+      <div class="inputfield">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="input" required><br><br>
+      </div>
+
+      <div class="inputfield">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="input" required><br><br>
+      </div>
+
+      <div class="inputfield">
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" class="input" required><br><br>
+      </div>
+
+      <div class="inputfield">
+        <label for="car_model">Car Model:</label>
+        <input type="text" id="car_model" name="car_model" class="input" required><br><br>
+      </div>
+
+      <div class="inputfield">
+        <label for="service">Service:</label>
+        <div class="custom_select">
+          <select id="option" name="service">
+            <option value="Basic">Basic Cleaning</option>
+            <option value="Premium">Premium Cleaning</option>
+            <option value="Complex">Complex Cleaning</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inputfield">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" class="input" required><br><br>
+      </div>
+
+      <div class="inputfield">
+        <input type="submit" value="Submit" href="authentication/html" class="btn">
+          <a href="{% url 'reservation_view' %}" class="btn">View</a>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+<section class= "about-us" id="About-us">
+    <div class = "image">
+    <img src="{%static 'images/1.png'%}"alt="">
+    </div>
+
+    <div class = "content">
+        <h2>About Us</h2>
+        <span><!-- line here --></span>
+        <p>We’re passionate about car detailing and car wash. And we’d love to share some of that passion and our deep knowledge with you, our valued customers! You can expect to receive guidance, tips and tricks to keep your vehicle clean and looking like new. We receive many of the same frequently asked questions from our customers and we aim to address some of your car detailing questions here. Thanks for stopping by!</p>
+        <ul class = "links">
+            <li><a href = "#Store">store</a></li>
+            <div class = "vertical-line"></div>
+            <li><a href = "#Service">service</a></li>
+            <div class = "vertical-line"></div>
+            <li><a href = "#Contact">contact</a></li>
+        </ul>
+        <ul class = "icons">
+            <li>
+                <i class = "fa fa-twitter"></i>
+            </li>
+            <li>
+                <i class = "fa fa-facebook"></i>
+            </li>
+            <li>
+                <i class = "fa fa-github"></i>
+            </li>
+            <li>
+                <i class = "fa fa-pinterest"></i>
+            </li>
+        </ul>
+    </div>
+</section><br><br>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<div  class="contact" id="Contact">
+    <div class="contact-container">
+        <div class="contact-content">
+        <div class="left-side">
+            <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">12 S. Nasr City</div>
+            <div class="text-two">October, Giza</div>
+            </div>
+            <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">01010036560</div>
+            <div class="text-two">+0096 3434 5678</div>
+            </div>
+            <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">mrbubbles@gmail.com</div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+            <p>If you have any quesions or Queries about either products or washing packages please contact us and we will answer you as soon as possible .</p>
+        <form method="post" action="">
+
+
+            <div class="input-box">
+            <input type="text" id="name2" placeholder="Enter your name">
+            </div>
+            <div class="input-box">
+            <input type="text" id="email2" placeholder="Enter your email">
+            </div>
+            <div class="input-box message-box">
+            <div class="input-box">
+                <input type="text" id="message" placeholder="Enter your message">
+            </div>
+
+            </div>
+              <div class="button">
+              <input type="submit" class="btn" value="Send Now">
+              </div>
+
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-distributed">
+<hr class="line">
+      <div class="footer-left">
+
+    <img src="{%static 'images/2.png'%}"alt="" class="logo">
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">Store</a>
+
+          <a href="#">Service</a>
+
+          <a href="#">About us</a>
+
+
+
+          <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">MRBUBBLE © 2015</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>12 S. Nasr City</span> October, Giza</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0103248214</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">mrbubbles@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          We’re passionate about car detailing and car wash. And we’d love to share some of that passion and our deep knowledge with you, our valued customers! You can expect to receive guidance, tips and tricks to keep your vehicle clean and looking like new.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script>
+	function createSlick(){
+
+	$(".slider").not('.slick-initialized').slick({
+		centerMode: true,
+	    autoplay: true,
+	    dots: true,
+        arrows: true,
+  		slidesToShow: 3,
+	    responsive: [{
+	    breakpoint: 768,
+	    settings: {
+	    dots: false,
+	    arrows: false,
+	    infinite: true,
+	    slidesToShow: 1,
+	    slidesToScroll: 1
+	        }
+	    }]
+	});
+}
+createSlick();
+
+//Will not throw error, even if called multiple times.
+$(window).on( 'resize', createSlick );
+
+
+
+</script>
+
+</body>
+</html>

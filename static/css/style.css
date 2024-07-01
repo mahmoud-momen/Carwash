@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+
+
+body{
+  width: 100%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("wash.jpg");
+  background-size: cover;
+  color: #000;
+  /* background-repeat: no-repeat; */
+  /* background-size: 1920px 1080px; */
+}
+
+form{
+  width: 500px;
+  height: 400px;
+  margin: 16rem auto;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+}
+h1{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+
+label{
+  margin: 5px 60px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.inputs{
+  width: 70%;
+  padding: .5rem 1rem;
+  margin: 5px 60px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  /* opacity: .6; */
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inputs:focus{
+  border: 2px solid darkgoldenrod;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.submit {
+  text-align: center;
+}
+.btn{
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: darkgoldenrod;
+  opacity: .9;
+  color: #fff;
+  border-radius: 20px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.btn:hover{
+  opacity: 1;
+}
+
+p{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p a{
+  text-decoration: none;
+  color: rgb(218, 166, 34)  ;
+  margin-left: 10px;
+}
+
+p a:hover{
+  text-decoration: underline;
+}
+
+
+.signup{
+  width: 500px;
+  height: 600px;
+  margin: 10rem auto;
+}
+
+.alert {
+  position: fixed;
+  top: 80px;
+  z-index: 11;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  font-size: 16px;
+  text-align: center;
+}
